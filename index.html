@@ -24,6 +24,7 @@ text-align:center;
 100%{background-position:100% 50%;}
 }
 
+
 /* floating music icons */
 
 .music{
@@ -44,23 +45,43 @@ opacity:0.35;
 100%{transform:translateY(0);}
 }
 
-/* main card */
 
-.container{
-max-width:520px;
-margin:auto;
-margin-top:80px;
-background:linear-gradient(180deg,#ffffff,#eaf6ff);
-padding:40px;
-border-radius:20px;
-box-shadow:0 25px 60px rgba(0,0,0,0.35);
+/* HERO SECTION */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+box-sizing:border-box;
 }
 
-/* animated mic */
+.award{
+width:90%;
+max-width:420px;
+display:block;
+margin:auto;
+border-radius:10px;
+}
 
-.mic{
-font-size:50px;
+.hero-text{
+margin-top:20px;
+font-size:20px;
+font-weight:500;
+color:#222;
+max-width:400px;
+}
+
+
+/* SCROLL ARROW */
+
+.scroll-arrow{
+font-size:32px;
+margin-top:25px;
 animation:bounce 1.5s infinite;
+color:#222;
 }
 
 @keyframes bounce{
@@ -68,9 +89,23 @@ animation:bounce 1.5s infinite;
 50%{transform:translateY(-10px);}
 }
 
-.award{
-width:120px;
-margin-bottom:10px;
+
+/* MAIN CARD */
+
+.container{
+max-width:520px;
+margin:auto;
+margin-top:40px;
+background:linear-gradient(180deg,#ffffff,#eaf6ff);
+padding:40px;
+border-radius:20px;
+box-shadow:0 25px 60px rgba(0,0,0,0.35);
+}
+
+
+.mic{
+font-size:50px;
+animation:bounce 1.5s infinite;
 }
 
 .highlight{
@@ -119,16 +154,29 @@ color:#444;
 <div class="music music3">🎵</div>
 <div class="music music4">🎶</div>
 
-<div class="container">
 
-<!-- AWARD IMAGE -->
+<!-- HERO SECTION -->
+
+<div class="hero">
+
 <img src="https://i.postimg.cc/QtNH8XJd/photo-2026-03-13-11-56-19.jpg" class="award">
 
-<div class="mic">🎤</div>
-
-<p>
+<div class="hero-text">
 If this little award made you smile for a moment,
-</p>
+</div>
+
+<div class="scroll-arrow">
+⬇
+</div>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+<div class="mic">🎤</div>
 
 <p class="highlight">
 Imagine 3 hours of music, laughter and good vibes
@@ -153,6 +201,7 @@ Book My Seat
 
 </div>
 
+
 <script>
 
 var eventDate = new Date("March 15, 2026 19:00:00").getTime();
@@ -176,3 +225,4 @@ days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
 
 </body>
 </html>
+```
